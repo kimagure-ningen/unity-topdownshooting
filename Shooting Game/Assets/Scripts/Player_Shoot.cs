@@ -6,7 +6,8 @@ public class Player_Shoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
+            // * TO-DO
+            // * 
         }
     }
 }
