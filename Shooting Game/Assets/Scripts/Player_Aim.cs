@@ -24,12 +24,15 @@ public class Player_Aim : MonoBehaviour
             Debug.Log(mouse_WorldPos);
         }
 
-        Vector3 target_Pos = new Vector3(mouse_WorldPos.x, transform.position.y, mouse_WorldPos.z);
-        Vector3 lookRotation = target_Pos - transform.position;
+        // Character Rotation
+        Vector3 mouse_RedefinedPos = new Vector3(mouse_WorldPos.x, transform.position.y, mouse_WorldPos.z);
+        Vector3 lookRotation = mouse_RedefinedPos - transform.position;
         transform.rotation = Quaternion.LookRotation(lookRotation, Vector3.up);
 
-
+        // Line Renderer Rotation
+        Vector3 normalized_Pos = (mouse_RedefinedPos - transform.position).normalized * 2.0f;
+        Vector3 line_EndPos = new Vector3(normalized_Pos.x + transform.position.x, 2f, normalized_Pos.z + transform.position.z);
         aim_Line.SetPosition(0, gameObject.transform.position);
-        aim_Line.SetPosition(1, target_Pos);
+        aim_Line.SetPosition(1, line_EndPos);
     }
 }
