@@ -4,10 +4,11 @@ public class Player_Shoot : MonoBehaviour
 {
     [SerializeField]
     private GameObject aim_LineRenderer;
-    [SerializeField]
     private float range = 3.0f;
     LineRenderer aim_Line;
     Vector3 mouse_WorldPos;
+    [SerializeField]
+    private GameObject bulletPrefab;
 
     void Start()
     {
@@ -39,8 +40,13 @@ public class Player_Shoot : MonoBehaviour
         aim_Line.SetPosition(1, line_EndPos);
 
         // Shoot
-        if (Input.GetMouseButtonDown(0)) {
-            
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject bulletGameObject = (GameObject)Instantiate(bulletPrefab, transform.position, new Quaternion(0, 0, 0, 0));
+            Bullet bulletScript = bulletGameObject.GetComponent<Bullet>();
+            bulletGameObject.transform.position = Vector3.MoveTowards(transform.position, line_EndPos, 20);
+
+            // * Shoot bullet development next!
         }
     }
 }
