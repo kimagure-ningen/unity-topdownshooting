@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Player_Shoot : MonoBehaviour
 {
+    [Header("Unity Stuff")]
     [SerializeField]
     private GameObject aim_LineRenderer;
-    private float range = 3.0f;
-    LineRenderer aim_Line;
-    Vector3 mouse_WorldPos;
     [SerializeField]
     private GameObject bulletPrefab;
+    public Vector3 bulletDestination;
+    private float range = 3.0f;
+    Vector3 mouse_WorldPos;
+    LineRenderer aim_Line;
 
     void Start()
     {
@@ -42,9 +44,10 @@ public class Player_Shoot : MonoBehaviour
         // Shoot
         if (Input.GetMouseButtonDown(0))
         {
+            bulletDestination = line_EndPos;
             GameObject bulletGameObject = (GameObject)Instantiate(bulletPrefab, transform.position, new Quaternion(0, 0, 0, 0));
-            Bullet bulletScript = bulletGameObject.GetComponent<Bullet>();
-            bulletGameObject.transform.position = Vector3.MoveTowards(transform.position, line_EndPos, 20);
+            // Bullet bulletScript = bulletGameObject.GetComponent<Bullet>();
+            // bulletGameObject.transform.position = Vector3.MoveTowards(transform.position, line_EndPos, 1);
 
             // * Shoot bullet development next!
         }
