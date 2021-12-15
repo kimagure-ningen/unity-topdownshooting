@@ -27,7 +27,6 @@ public class Player_Shoot : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100, layerMask))
         {
             mouse_WorldPos = hit.point;
-            Debug.Log(mouse_WorldPos);
         }
 
         // Character Rotation
@@ -46,10 +45,6 @@ public class Player_Shoot : MonoBehaviour
         {
             bulletDestination = line_EndPos;
             GameObject bulletGameObject = (GameObject)Instantiate(bulletPrefab, transform.position, new Quaternion(0, 0, 0, 0));
-            // Bullet bulletScript = bulletGameObject.GetComponent<Bullet>();
-            // bulletGameObject.transform.position = Vector3.MoveTowards(transform.position, line_EndPos, 1);
-
-            // * Shoot bullet development next!
         }
     }
 }
