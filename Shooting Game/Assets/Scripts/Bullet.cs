@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    GameObject playerMesh;
-    Player_Shoot script;
-    Vector3 bulletDestination;
+    // Script Basic Settings (Do Not Change)
+    private Player_Shoot playerShootScript;
+    private Vector3 bulletDestination;
+
+    // Unique Settings
     private float bulletSpeed = 0.025f;
+    private float bulletDamage = 10f;
+
     void Start()
     {
-        playerMesh = GameObject.Find("Player_Mesh");
-        script = playerMesh.GetComponent<Player_Shoot>();
-        bulletDestination = script.bulletDestination;
+        playerShootScript = GameObject.Find("Player_Mesh").GetComponent<Player_Shoot>();
+        bulletDestination = playerShootScript.bulletDestination;
 
     }
     void Update()

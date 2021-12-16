@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Player_Shoot : MonoBehaviour
 {
+    // Script Basic Settings (Do Not Change)
     [Header("Unity Stuff")]
     [SerializeField]
     private GameObject aim_LineRenderer;
+    private LineRenderer aim_Line;
     [SerializeField]
     private GameObject bulletPrefab;
+    private Vector3 mouse_WorldPos;
     public Vector3 bulletDestination;
+
+    // Unique Settings
     private float range = 3.0f;
-    Vector3 mouse_WorldPos;
-    LineRenderer aim_Line;
 
     void Start()
     {
