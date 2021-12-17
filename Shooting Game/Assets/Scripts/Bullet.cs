@@ -7,8 +7,9 @@ public class Bullet : MonoBehaviour
     private Vector3 bulletDestination;
 
     // Unique Settings
-    private float bulletSpeed = 0.025f;
-    private float bulletDamage = 10f;
+    private float bulletSpeed = 10f;
+    [HideInInspector]
+    public float bulletDamage = 25f;
 
     void Start()
     {
@@ -22,6 +23,6 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        transform.position = Vector3.MoveTowards(transform.position, bulletDestination, bulletSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, bulletDestination, bulletSpeed * Time.deltaTime);
     }
 }
