@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Shoot : MonoBehaviour
@@ -14,18 +15,21 @@ public class Player_Shoot : MonoBehaviour
     public Vector3 bulletDestination;
 
     // Unique Settings
-    private float range = 3.0f;
+    private float range = 4.0f;
     private float fireRate = 2.5f;
     private bool canFire;
-
-    private Color reloadColor = new Color(200f, 200f, 200f, 0.5f);
-    public Color readyFireColor = new Color(60f, 250f, 10f, 0.5f);
-    private Color canFireColor = new Color(200f, 200f, 200f, 1f);
+    private Color reloadColor = new Color(70f / 255f, 70f / 255f, 70f / 255f, 0.3f);
+    private Color readyFireColor = new Color(0f / 255f, 176f / 255f, 10f / 255f, 0.5f);
+    private Color canFireColor = new Color(70f / 255f, 70f / 255f, 70f / 255f, 0.8f);
 
     void Start()
     {
         aimLine = aimLineRenderer.GetComponent<LineRenderer>();
         canFire = true;
+        aimLine.startColor = canFireColor;
+        aimLine.endColor = canFireColor;
+        aimLine.startWidth = 1f;
+        aimLine.endWidth = 1f;
     }
 
     void Update()
