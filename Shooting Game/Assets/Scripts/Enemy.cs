@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         healthBar.value = health;
