@@ -8,9 +8,9 @@ public class Player_Shoot : MonoBehaviour
     [Header("Unity Stuff")]
     [SerializeField]
     private GameObject aimLineRenderer;
-    private LineRenderer aimLine;
     [SerializeField]
     private GameObject bulletPrefab;
+    private LineRenderer aimLine;
     private Vector3 mouseWorldPos;
     public Vector3 bulletDestination;
 
