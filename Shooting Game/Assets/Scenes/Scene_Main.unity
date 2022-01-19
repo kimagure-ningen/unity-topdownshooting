@@ -1394,6 +1394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7296295193164369890, guid: 5f312f562ed06d641913599629aa011c, type: 3}
+  area: {fileID: 3007255798730462039}
   timerText: {fileID: 1066692152}
 --- !u!1001 &3007255798730462038
 PrefabInstance:
@@ -1464,6 +1465,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1895d459f05ea4fa986eb9cf83b1fe, type: 3}
+--- !u!1 &3007255798730462039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1258994994181360880, guid: fb1895d459f05ea4fa986eb9cf83b1fe, type: 3}
+  m_PrefabInstance: {fileID: 3007255798730462038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7296295194601000965
 PrefabInstance:
   m_ObjectHideFlags: 0

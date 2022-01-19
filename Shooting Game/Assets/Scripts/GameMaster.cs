@@ -9,6 +9,9 @@ public class GameMaster : MonoBehaviour
     [SerializeField]
     private GameObject enemy;
     [SerializeField]
+    private GameObject area;
+    private float shrinkSpeed = 0.02f;
+    [SerializeField]
     private Text timerText;
     private float timer;
 
@@ -19,6 +22,11 @@ public class GameMaster : MonoBehaviour
     void Update() {
         timer += Time.deltaTime;
         UpdateTimerUI(timer);
+        if (area.transform.localScale.x < 0 || area.transform.localScale.z < 0) {
+            return;
+        }
+        AreaShrink();
+
     }
 
     IEnumerator EnemySpawner() {
@@ -33,5 +41,9 @@ public class GameMaster : MonoBehaviour
         float seconds = Mathf.FloorToInt(timer % 60);
         string currentTime = string.Format("{00:00}{1:00}", minutes, seconds);
         timerText.text = currentTime[0].ToString() + currentTime[1].ToString() + ":" + currentTime[2].ToString() + currentTime[3].ToString();
+    }
+
+    void AreaShrink() {
+        area.transform.localScale = new Vector3(area.transform.localScale.x - shrinkSpeed * Time.deltaTime, area.transform.localScale.y, area.transform.localScale.z - shrinkSpeed * Time.deltaTime);
     }
 }
