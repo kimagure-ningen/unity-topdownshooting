@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class Enemy : MonoBehaviour
     [Header("Unity Stuff")]
     [SerializeField]
     private Slider healthBar;
+    [SerializeField]
+    private GameObject player;
+
+    private NavMeshAgent _agent;
 
     // Unique Settings
     private float startHealth = 100f;
@@ -17,6 +22,8 @@ public class Enemy : MonoBehaviour
         health = startHealth;
         healthBar.maxValue = startHealth;
         healthBar.value = health;
+
+        _agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -25,6 +32,7 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
+        _agent.destination = player.transform.position;
     }
 
     void OnTriggerEnter(Collider collider)
