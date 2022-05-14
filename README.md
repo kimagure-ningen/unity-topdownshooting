@@ -1,6 +1,6 @@
 # Unity Top-Down Shooting Game
 ## Overview
-Unity 3D project, top-down shooting game, still in early development stage.
+Unity 3D project, top-down shooting game.
 <br>
 Started on November of 2021.
 <br>
