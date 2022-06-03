@@ -5,3 +5,8 @@ Unity 3D project, top-down shooting game.
 Started on November of 2021.
 <br>
 Project discontinued in march 2022.
+<br>
+## Project Images
+From Side             |  Overall Image
+:-------------------------:|:-------------------------:
+![image(1)](https://github.com/kimagure-ningen/unity-topdownshooting/blob/main/Images/image(1).png)  |  ![image(2)](https://github.com/kimagure-ningen/unity-topdownshooting/blob/main/Images/image(2).png)
