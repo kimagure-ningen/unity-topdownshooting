@@ -1,4 +1,4 @@
-# Unity Top-Down Shooting Game
+# Top-Down Shooting
 ## Overview
 Unity 3D project, top-down shooting game. (Run in Unity 2020.3.15f2)
 <br>
