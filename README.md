@@ -4,7 +4,7 @@ Unity 3D project, top-down shooting game. (Run in Unity 2020.3.15f2)
 <br>
 Started on November of 2021.
 <br>
-Project discontinued in march 2022.
+Project discontinued in March of 2022.
 <br>
 ## Project Images
 From Side             |  Overall Image
