@@ -1,10 +1,10 @@
 # Top-Down Shooting
 ## Overview
-Unity 3D project, top-down shooting game. (Run in Unity 2020.3.15f2)
+Unity 3D project, top-down shooting game test. (Run in Unity 2020.3.15f2)
 <br>
 Started on November of 2021.
 <br>
-Project discontinued in March of 2022.
+Project completed in March of 2022.
 <br>
 ## Project Images
 From Side             |  Overall Image
